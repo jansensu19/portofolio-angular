@@ -1,0 +1,24 @@
+<div class="flex flex-col w-full flex-auto items-center my-5">
+  <p class="opacity-70">My Recent Work</p>
+  <h1 class="text-6xl">Portofolio</h1>
+
+  <div class="flex flex-row mt-10">
+    <div class="grid grid-cols-3 mt-10 mr-10 gap-x-20 gap-y-10">
+      <div
+        *ngFor="let item of dummyPortfolioData"
+        class="flex flex-col w-full h-full bg-blue-600/70 rounded-3xl"
+      >
+        <img [src]="item.image" [alt]="item.name" />
+
+        <div class="text-center">
+          {{item.name}}
+        </div>
+
+        <div class="flex flex-row justify-center">
+          <button mat-flat-button class="m-2"><a [href]="item.github">Github</a></button>
+          <button mat-flat-button class="m-2"><a [href]="item.demo">Live demo</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

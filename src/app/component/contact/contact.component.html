@@ -1,0 +1,54 @@
+<div class="flex flex-col w-full flex-auto items-center my-5">
+  <p class="opacity-70">Get In Touch</p>
+  <h1 class="text-6xl">Contact Me</h1>
+
+  <div class="flex flex-row w-full justify-center mt-10">
+        <div class="flex flex-col w-50 mx-10">
+          <div class="flex flex-col justify-center items-center bg-blue-600/40 rounded-3xl mb-5 px-20 py-10">
+            <mat-icon class="mb-5">email</mat-icon>
+            <div class="flex flex-col text-center">
+              <span>Email</span>
+              <span class="mb-3">jansen.zix@gmail.com</span>
+              <span>Send a message</span>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center items-center bg-blue-600/40 rounded-3xl mb-5 px-20 py-10">
+            <mat-icon class="mb-5">email</mat-icon>
+            <div class="flex flex-col text-center">
+              <span>Messenger</span>
+              <span class="mb-3">jansen.zix@gmail.com</span>
+              <span>Send a message</span>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center items-center bg-blue-600/40 rounded-3xl mb-5 px-20 py-10">
+            <mat-icon class="mb-5">email</mat-icon>
+            <div class="flex flex-col text-center">
+              <span>WhatsApp</span>
+              <span class="mb-3">087768727770</span>
+              <span>Send a message</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-1/3 px-20">
+          <form [formGroup]="contactForm" class="flex flex-col">
+            <mat-form-field subscriptSizing="dynamic" appearance="outline" class="mb-5">
+              <input class="px-10 h-12" matInput formControlName="name" placeholder="Name" />
+            </mat-form-field>
+        
+            <mat-form-field subscriptSizing="dynamic" appearance="outline" class="mb-5">
+              <input matInput formControlName="email" placeholder="Email" />
+            </mat-form-field>
+        
+            <mat-form-field subscriptSizing="dynamic" appearance="outline" class="mb-5">
+              <textarea matInput formControlName="message" [rows]="5" cdkTextareaAutosize
+              [cdkAutosizeMinRows]="1" placeholder="Message" class="h-24"></textarea>
+            </mat-form-field>
+        
+            <button class="mt-4 w-1/2" mat-flat-button>Send Message</button>
+          </form>
+        </div>
+        
+        
+  </div>
+</div>

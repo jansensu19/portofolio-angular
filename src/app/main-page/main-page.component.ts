@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-main-page',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent {
+  @ViewChild('hero', { static: false }) hero: ElementRef | undefined;
 
+  scrollToTop($loading: any) {
+    $loading.scrollIntoView({ top: 0, behavior: 'smooth' });
+  }
 }

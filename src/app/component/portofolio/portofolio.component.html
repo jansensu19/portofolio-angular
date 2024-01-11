@@ -8,15 +8,15 @@
         *ngFor="let item of dummyPortfolioData"
         class="flex flex-col w-full h-full bg-blue-600/70 rounded-3xl"
       >
-        <img [src]="item.image" [alt]="item.name" />
+        <img class="p-5 rounded-lg" [src]="item.image" [alt]="item.name" />
 
-        <div class="text-center">
+        <div class="text-xl font-semibold px-5 my-10">
           {{item.name}}
         </div>
 
-        <div class="flex flex-row justify-center">
-          <button mat-flat-button class="m-2"><a [href]="item.github">Github</a></button>
-          <button mat-flat-button class="m-2"><a [href]="item.demo">Live demo</a></button>
+        <div class="flex flex-row mx-2">
+          <button mat-stroked-button class="bg-blue-500 m-2"><a [href]="item.github">Github</a></button>
+          <button mat-raised-button class="bg-blue-500 m-2"><a [href]="item.demo">Live demo</a></button>
         </div>
       </div>
     </div>

@@ -1,31 +1,31 @@
-<div class="flex flex-col w-full flex-auto items-center my-5">
+<div class="flex flex-col w-full flex-auto items-center my-20">
   <p class="opacity-70">Get In Touch</p>
   <h1 class="text-6xl">Contact Me</h1>
 
   <div class="flex flex-row w-full justify-center mt-10">
         <div class="flex flex-col w-50 mx-10">
           <div class="flex flex-col justify-center items-center bg-blue-600/40 rounded-3xl mb-5 px-20 py-10">
-            <mat-icon class="mb-5">email</mat-icon>
+            <i class="fa-regular fa-envelope text-2xl mb-2"></i>
             <div class="flex flex-col text-center">
               <span>Email</span>
               <span class="mb-3">jansen.zix@gmail.com</span>
-              <span>Send a message</span>
+              <a class="text-blue-400 hover:text-indigo-400" [href]="'https://api.whatsapp.com/send?phone=' + 087768727770" target="_blank" rel="noreferrer">Send a message</a>
             </div>
           </div>
           <div class="flex flex-col justify-center items-center bg-blue-600/40 rounded-3xl mb-5 px-20 py-10">
-            <mat-icon class="mb-5">email</mat-icon>
+            <i class="fa-brands fa-facebook-messenger text-2xl mb-2"></i>
             <div class="flex flex-col text-center">
               <span>Messenger</span>
               <span class="mb-3">jansen.zix@gmail.com</span>
-              <span>Send a message</span>
+              <a class="text-blue-400 hover:text-indigo-400" [href]="'https://api.whatsapp.com/send?phone=' + 087768727770" target="_blank" rel="noreferrer">Send a message</a>
             </div>
           </div>
           <div class="flex flex-col justify-center items-center bg-blue-600/40 rounded-3xl mb-5 px-20 py-10">
-            <mat-icon class="mb-5">email</mat-icon>
+            <i class="fa-brands fa-whatsapp text-2xl mb-2"></i>
             <div class="flex flex-col text-center">
               <span>WhatsApp</span>
               <span class="mb-3">087768727770</span>
-              <span>Send a message</span>
+              <a class="text-blue-400 hover:text-indigo-400" [href]="'https://api.whatsapp.com/send?phone=' + 087768727770" target="_blank" rel="noreferrer">Send a message</a>
             </div>
           </div>
         </div>
@@ -35,20 +35,18 @@
             <mat-form-field subscriptSizing="dynamic" appearance="outline" class="mb-5">
               <input class="px-10 h-12" matInput formControlName="name" placeholder="Name" />
             </mat-form-field>
-        
+
             <mat-form-field subscriptSizing="dynamic" appearance="outline" class="mb-5">
               <input matInput formControlName="email" placeholder="Email" />
             </mat-form-field>
-        
+
             <mat-form-field subscriptSizing="dynamic" appearance="outline" class="mb-5">
               <textarea matInput formControlName="message" [rows]="5" cdkTextareaAutosize
               [cdkAutosizeMinRows]="1" placeholder="Message" class="h-24"></textarea>
             </mat-form-field>
-        
-            <button class="mt-4 w-1/2" mat-flat-button>Send Message</button>
+
+            <button class="bg-blue-600" mat-flat-button>Send Message</button>
           </form>
         </div>
-        
-        
   </div>
 </div>

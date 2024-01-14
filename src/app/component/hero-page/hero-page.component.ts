@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./hero-page.component.scss']
 })
 export class HeroPageComponent {
-
+  scrollToBottom() {
+    window.scrollTo({ top: 800, behavior: 'smooth' });
+  }
 }

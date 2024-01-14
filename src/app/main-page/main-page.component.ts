@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-main-page',
@@ -6,9 +6,16 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./main-page.component.scss']
 })
 export class MainPageComponent {
-  @ViewChild('hero', { static: false }) hero: ElementRef | undefined;
+  constructor() {}
 
-  scrollToTop($loading: any) {
-    $loading.scrollIntoView({ top: 0, behavior: 'smooth' });
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   }
 }

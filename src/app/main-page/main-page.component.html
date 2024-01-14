@@ -1,37 +1,74 @@
 <div class="flex flex-col flex-auto m-0 w-full">
-  <app-hero-page #hero></app-hero-page>
-  <app-about-me #about></app-about-me>
-  <app-experience #experience></app-experience>
-  <app-portofolio #portofolio></app-portofolio>
-  <app-contact #contact></app-contact>
-  <app-footer></app-footer>
+  <div id="hero">
+    <app-hero-page></app-hero-page>
+  </div>
+
+  <div id="about">
+    <app-about-me></app-about-me>
+  </div>
+
+  <div id="experience">
+    <app-experience></app-experience>
+  </div>
+
+  <div id="portfolio">
+    <app-portofolio></app-portofolio>
+  </div>
+
+  <div id="contact">
+    <app-contact></app-contact>
+  </div>
+
+  <app-footer (scrollToSection)="scrollToSection($event)"></app-footer>
+
   <div class="fixed sm:bottom-12 xxs:bottom-3 xxs:right-3 sm:right-12">
-    <button mat-icon-button (click)="scrollToTop('hero')"
+    <button mat-icon-button (click)="scrollToTop()"
       class="bg-gradient-to-tr w-full z-100 from-green-800 to-green-500 hover:scale-105 hover:shadow-lg transition-shadow rounded-full">
       <mat-icon>arrow_upward</mat-icon>
     </button>
   </div>
-  <div class="fixed bottom-0 flex justify-center items-center w-full z-10">
 
-    <div class="flex flex-row my-3 px-2 bg-gray-700 transition-opacity opacity-75 rounded-full">
-      <a href="#hero" mat-icon-button
-        class="lg:text-xl text-md text-white mx-1 my-1 px-2 py-1 rounded-full hover:bg-slate-500">
+  <div class="fixed bottom-0 flex justify-center items-center w-full z-10">
+    <div
+      class="flex flex-row my-3 px-2 bg-gray-700 transition-opacity opacity-75 rounded-full"
+    >
+      <button
+        mat-icon-button
+        (click)="scrollToSection('hero')"
+        class="lg:text-xl text-md text-white mx-1 my-1 px-2 py-1 rounded-full hover:bg-slate-500"
+      >
         <mat-icon>home</mat-icon>
-      </a>
-      <button mat-icon-button
-        class="lg:text-xl text-md text-white mx-1 my-1 px-2 py-1 rounded-full hover:bg-slate-500">
+      </button>
+
+      <button
+        mat-icon-button
+        (click)="scrollToSection('about')"
+        class="lg:text-xl text-md text-white mx-1 my-1 px-2 py-1 rounded-full hover:bg-slate-500"
+      >
         <mat-icon>account_box</mat-icon>
       </button>
-      <button mat-icon-button
-        class="lg:text-xl text-md text-white mx-1 my-1 px-2 py-1 rounded-full hover:bg-slate-500">
+
+      <button
+        mat-icon-button
+        (click)="scrollToSection('experience')"
+        class="lg:text-xl text-md text-white mx-1 my-1 px-2 py-1 rounded-full hover:bg-slate-500"
+      >
         <mat-icon>face</mat-icon>
       </button>
-      <button mat-icon-button
-        class="lg:text-xl text-md text-white mx-1 my-1 px-2 py-1 rounded-full hover:bg-slate-500">
+
+      <button
+        mat-icon-button
+        (click)="scrollToSection('portfolio')"
+        class="lg:text-xl text-md text-white mx-1 my-1 px-2 py-1 rounded-full hover:bg-slate-500"
+      >
         <mat-icon>insert_drive_file</mat-icon>
       </button>
-      <button mat-icon-button
-        class="lg:text-xl text-md text-white mx-1 my-1 px-2 py-1 rounded-full hover:bg-slate-500">
+
+      <button
+        mat-icon-button
+        (click)="scrollToSection('contact')"
+        class="lg:text-xl text-md text-white mx-1 my-1 px-2 py-1 rounded-full hover:bg-slate-500"
+      >
         <mat-icon>phone</mat-icon>
       </button>
     </div>

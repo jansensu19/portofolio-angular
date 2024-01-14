@@ -16,7 +16,8 @@ import { ContactComponent } from './component/contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import { FooterComponent } from './component/footer/footer.component';
-
+import { ToastService, AngularToastifyModule } from 'angular-toastify'; 
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,14 +32,16 @@ import { FooterComponent } from './component/footer/footer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AngularToastifyModule,
     MatFormFieldModule,
+    HttpClientModule,
     MatInputModule,
     ReactiveFormsModule,
     MatIconModule,
     MatButtonModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [ToastService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

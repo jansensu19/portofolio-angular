@@ -1,4 +1,4 @@
-<div class="flex flex-col flex-auto m-0 w-full">
+<div class="flex flex-col flex-auto sm:m-0 w-full m-auto">
   <div id="hero">
     <app-hero-page></app-hero-page>
   </div>
@@ -21,14 +21,14 @@
 
   <app-footer (scrollToSection)="scrollToSection($event)"></app-footer>
 
-  <div class="fixed sm:bottom-12 xxs:bottom-3 xxs:right-3 sm:right-12">
+  <div class="hidden sm:block fixed sm:bottom-12 xxs:bottom-3 xxs:right-3 sm:right-12">
     <button mat-icon-button (click)="scrollToTop()"
       class="bg-gradient-to-tr w-full z-100 from-green-800 to-green-500 hover:scale-105 hover:shadow-lg transition-shadow rounded-full">
       <mat-icon>arrow_upward</mat-icon>
     </button>
   </div>
 
-  <div class="fixed bottom-0 flex justify-center items-center w-full z-10">
+  <div class="hidden fixed bottom-0 sm:flex justify-center items-center w-full z-10">
     <div
       class="flex flex-row my-3 px-2 bg-gray-700 transition-opacity opacity-75 rounded-full"
     >

@@ -1,41 +1,43 @@
-<div class="flex flex-col w-full flex-auto items-center my-20">
+<div class="flex flex-col w-full flex-auto items-center my-72 sm:my-20">
   <p class="opacity-70">Get To Know</p>
   <h1 class="text-6xl">About Me</h1>
 
-  <div class="flex justify-center w-full my-20 mx-10">
+  <div class="flex flex-col sm:flex-row justify-center w-full my-20 mx-10">
     <div class="flex mx-10 relative">
       <img class="w-72 rounded-xl rotate-12 z-20" src="../../../assets/img/me.jpg" alt="Jansen">
       <div class="rounded-xl bg-gradient-to-r from-blue-400 opacity-70 absolute inset-0 z-10"></div>
     </div>
 
 
-    <div class="flex flex-col w-1/2 px-20 mx-10">
-      <div class="flex flex-row justify-center achievement">
-        <div class="flex flex-col w-52 h-32 mx-5 justify-center items-center bg-blue-600/70 rounded-xl z-10">
+    <div class="flex flex-col w-1/2 px-20 mt-20 sm:mt-0 sm:mx-10 mx-0">
+      <div class="flex flex-col sm:flex-row justify-center achievement">
+        <div class="flex flex-col sm:w-52 sm:h-32 w-52 h-52 mx-5 mt-5 sm:mt-0 justify-center items-center bg-blue-600/70 rounded-xl z-10">
           <mat-icon>school</mat-icon>
           <span class="font-bold mt-1">Experience</span>
           <p>1+ Years Working</p>
         </div>
-        <div class="flex flex-col w-52 h-32 mx-5 justify-center items-center bg-blue-600/70 rounded-xl z-10">
+        <div class="flex flex-col sm:w-52 sm:h-32 w-52 h-52 mx-5 mt-5 sm:mt-0 justify-center items-center bg-blue-600/70 rounded-xl z-10">
           <mat-icon>ballot</mat-icon>
           <span class="font-bold mt-1">Projects</span>
           <p>5+ Completed</p>
         </div>
-        <div class="flex flex-col w-52 h-32 mx-5 justify-center items-center bg-blue-600/70 rounded-xl z-10">
+        <div class="flex flex-col sm:w-52 sm:h-32 w-52 h-52 mx-5 mt-5 sm:mt-0 justify-center items-center bg-blue-600/70 rounded-xl z-10">
           <i class="fa-solid fa-book-open-reader"></i>
           <span class="font-bold mt-1">Skills</span>
           <p>10+ Skills</p>
         </div>
-
       </div>
-      <div class="flex mx-12 mt-5 tracking-widest leading-loose">
-        <p>1+ years of experience in Front-End Developer as well as in creating innovative web design, develop and tested website with newest technology. Familiar with HTML, Tailwind, Angular, TypeScript, RxJs. Looking for more challenge about React and how to optimize user experience.</p>
-      </div>
-      <div class="flex mx-12 mt-3">
-        <button class="text-black hover:bg-blue-600 bg-blue-400 rounded-md p-2 mt-5 px-3 mr-5 tracking-wide">
-          <a [href]="'https://api.whatsapp.com/send?phone=' + 087768727770" target="_blank" rel="noreferrer">Let's
-            Talk</a>
-        </button>
+    
+      <div class="flex flex-col">
+        <div class="flex mx-12 mt-5 tracking-widest leading-loose">
+          <p>1+ years of experience in Front-End Developer as well as in creating innovative web design, develop and tested website with newest technology. Familiar with HTML, Tailwind, Angular, TypeScript, RxJs. Looking for more challenge about React and how to optimize user experience.</p>
+        </div>
+        <div class="flex mx-12 mt-3">
+          <button class="text-black hover:bg-blue-600 bg-blue-400 rounded-md p-2 mt-5 px-3 mr-5 tracking-wide">
+            <a [href]="'https://api.whatsapp.com/send?phone=' + 087768727770" target="_blank" rel="noreferrer">Let's
+              Talk</a>
+          </button>
+        </div>
       </div>
     </div>
   </div>

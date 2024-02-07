@@ -3,20 +3,20 @@
   <h1 class="text-6xl">Portofolio</h1>
 
   <div class="flex flex-row mt-10">
-    <div class="grid grid-cols-3 mt-10 mr-10 gap-x-20 gap-y-10">
+    <div class="grid grid-cols-1 sm:grid-cols-3 mt-10 mr-10 ml-10 sm:ml-0 sm:mr-10 gap-x-20 gap-y-10">
       <div
         *ngFor="let item of dummyPortfolioData"
         class="flex flex-col w-full h-full bg-blue-600/70 rounded-3xl"
       >
-        <img class="p-5 rounded-lg" [src]="item.image" [alt]="item.name" />
+        <img class="p-5 rounded-xl" [src]="item.image" [alt]="item.name" />
 
         <div class="text-xl font-semibold px-5 my-10">
           {{item.name}}
         </div>
 
-        <div class="flex flex-row mx-2">
-          <button mat-stroked-button class="bg-blue-500 m-2"><a [href]="item.github">Github</a></button>
-          <button mat-raised-button class="bg-blue-500 m-2"><a [href]="item.demo">Live demo</a></button>
+        <div class="flex flex-row m-4">
+          <a class="w-24 h-10 bg-sky-500 hover:bg-sky-700 m-2 rounded-lg ml-5 text-center leading-10" [href]="item.github" target="_blank">Github</a>
+          <a [href]="item.demo" target="_blank" class="w-24 h-10 bg-slate-700 hover:bg-slate-800 m-2 rounded-lg text-center leading-10">Live demo</a>
         </div>
       </div>
     </div>

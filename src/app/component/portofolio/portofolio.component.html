@@ -6,8 +6,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-3 mt-10 mr-10 ml-10 sm:ml-0 sm:mr-10 gap-x-20 gap-y-10">
       <div
         *ngFor="let item of dummyPortfolioData"
-        class="flex flex-col w-full h-full bg-blue-600/70 rounded-3xl"
-      >
+        class="flex flex-col w-full h-full bg-blue-600/70 rounded-3xl">
         <img class="p-5 rounded-xl" [src]="item.image" [alt]="item.name" />
 
         <div class="text-xl font-semibold px-5 my-10">
